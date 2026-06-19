@@ -1,0 +1,9 @@
+---
+- hosts: localhost
+  become: yes
+  
+  tasks:
+   - name: copy WAR file to Tomcat
+     copy:
+      src: target/mavenansible.war
+      dest: /var/lib/tomcat9/webapps/mavenansible.war
